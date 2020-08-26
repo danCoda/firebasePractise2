@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.19.0/firebase-auth.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.min.js"></script> <!-- Faker -->
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyCicWN11SpKxGvrDirapUynb7-0gAAtDRs",
+            authDomain: "test20200826-5f027.firebaseapp.com",
+            databaseURL: "https://test20200826-5f027.firebaseio.com",
+            projectId: "test20200826-5f027",
+            storageBucket: "test20200826-5f027.appspot.com",
+            messagingSenderId: "751732426263",
+            appId: "1:751732426263:web:9eac3c273e191908f87e52"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+    </script>
+
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <h1>My test app 20200826</h1>
+
+    <section id="whenSignedIn" hidden="true">
+        <div id="userDetails"></div>
+        <button id="signOutBtn">Sign out</button>
+    </section>
+
+    <section id="whenSignedOut">
+        <button id="signInBtn">Sign in with Google</button>
+    </section>
+
+    <section>
+        <ul id="thingsList"></ul>
+        <button id="createThing">Create random thing</button>
+    </section>
+</body>
+
+</html>
